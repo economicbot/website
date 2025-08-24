@@ -24,7 +24,7 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <h1 className="text-xl font-bold text-primary">Dr. Academic</h1>
+            <h1 className="text-xl font-bold text-primary">Shraddha Yadav</h1>
           </div>
 
           {/* Desktop Navigation */}

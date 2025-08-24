@@ -35,7 +35,7 @@ const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
             {/* Content */}
             <div className="text-center lg:text-left lg:order-0">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                Dr. Your Name
+                Shraddha Yadav
               </h1>
               <h2 className="text-xl lg:text-2xl text-primary font-medium mb-6">
                 Assistant Professor of Economics

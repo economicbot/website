@@ -11,14 +11,14 @@ const Index = () => {
   // Update page title based on current section
   useEffect(() => {
     const titles = {
-      home: "Dr. Academic - Home",
-      about: "Dr. Academic - About",
-      research: "Dr. Academic - Research",
-      publications: "Dr. Academic - Publications",
-      teaching: "Dr. Academic - Teaching",
-      contact: "Dr. Academic - Contact",
+      home: "Shraddha Yadav",
+      about: "Shraddha Yadav - About",
+      research: "Shraddha Yadav - Research",
+      publications: "Shraddha Yadav - Publications",
+      teaching: "Shraddha Yadav - Teaching",
+      contact: "Shraddha Yadav - Contact",
     };
-    document.title = titles[currentSection as keyof typeof titles] || "Dr. Academic";
+    document.title = titles[currentSection as keyof typeof titles] || "Shraddha Yadav";
   }, [currentSection]);
 
   const renderSection = () => {
