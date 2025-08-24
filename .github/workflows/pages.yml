@@ -1,0 +1,71 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+env:
+  BUILD_DIR: dist          # ⬅️ change if your framework outputs somewhere else
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # If your project needs Node (Vite/React/Vue/Gatsby/etc)
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install deps
+        run: npm ci
+        # If you use yarn/pnpm, replace with:
+        # run: corepack enable && pnpm i --frozen-lockfile
+        # run: corepack enable && yarn --frozen-lockfile
+
+      # 👉 Set your build command here (examples below)
+      - name: Build
+        run: npm run build
+        # Examples:
+        # Vite/React: npm run build (outputs ./dist)
+        # Next.js static export: npx next build && npx next export -o out && echo "BUILD_DIR=out" >> $GITHUB_ENV
+        # Gatsby: npm run build && echo "BUILD_DIR=public" >> $GITHUB_ENV
+        # Static HTML (no build): mkdir -p dist && cp -R public/* dist/
+
+      # Optional: ensure your custom domain persists
+      - name: Ensure CNAME
+        if: ${{ env.CUSTOM_DOMAIN != '' }}
+        run: |
+          echo "${{ env.CUSTOM_DOMAIN }}" > ${{ env.BUILD_DIR }}/CNAME
+        env:
+          CUSTOM_DOMAIN: "" # set to your domain (e.g., shraddhayadav.com) or leave blank if already set in Pages settings
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ env.BUILD_DIR }}
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
