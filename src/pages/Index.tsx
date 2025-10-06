@@ -3,6 +3,7 @@ import Navigation from "@/components/Navigation";
 import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ResearchSection from "@/components/ResearchSection";
+import TeachingSection from "@/components/TeachingSection";
 import ContactSection from "@/components/ContactSection";
 
 const Index = () => {
@@ -31,14 +32,7 @@ const Index = () => {
       case "publications":
         return <ResearchSection />;
       case "teaching":
-        return (
-          <section className="py-20 px-4 sm:px-6 lg:px-8 min-h-screen flex items-center justify-center">
-            <div className="text-center">
-              <h2 className="text-3xl font-bold text-foreground mb-4">Teaching</h2>
-              <p className="text-lg text-muted-foreground">Teaching section coming soon...</p>
-            </div>
-          </section>
-        );
+        return <TeachingSection />;
       case "contact":
         return <ContactSection />;
       default:

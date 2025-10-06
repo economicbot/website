@@ -6,63 +6,58 @@ import { ExternalLink, FileText, Award } from "lucide-react";
 const ResearchSection = () => {
   const workingPapers = [
     {
-      title: "The Impact of Environmental Policies on Rural Labor Markets",
-      abstract: "This paper examines how environmental regulations affect employment patterns in rural communities, with particular focus on the transition to sustainable agricultural practices.",
+      title: "Gender-Diverse Workplaces and Men's Gender Role Attitudes Towards Working Women",
+      abstract: "We assess whether the presence of female coworkers influences men’s gender role attitudes toward working women (GRAWW), particularly regarding working women balancing professional and domestic responsibilities. Using panel data from Egypt, characterized by low female labor force participation and traditional gender norms, we estimate a two-way fixed effects model. Men in gender-diverse workplaces report significantly more progressive GRAWW, higher by 0.14 standard deviations, and with larger effects where women comprise over 25% of employees. Effects are stronger among younger men and those with more traditional baseline views. Results are robust to checks for self-selection, workplace characteristics, and pre-existing trends.",
       status: "Under Review",
-      coauthors: ["Dr. Jane Smith", "Prof. John Doe"],
-      keywords: ["Environmental Economics", "Labor Markets", "Rural Development"]
+      coauthors: ["Ajay Saharan"],
+      keywords: ["Gender Role Attitude", "Gender-diverse Workplaces"]
     },
     {
-      title: "Social Identity and Economic Decision Making in Developing Countries",
-      abstract: "An empirical analysis of how cultural and social identity factors influence economic choices and outcomes in emerging markets.",
-      status: "Working Paper",
-      coauthors: ["Dr. Alice Johnson"],
-      keywords: ["Behavioral Economics", "Development", "Social Identity"]
-    },
-    {
-      title: "Agricultural Innovation and Farmer Welfare: Evidence from Field Experiments",
-      abstract: "This study uses randomized controlled trials to assess the impact of new agricultural technologies on farmer income and well-being.",
-      status: "Draft",
+      title: "Education Tracks and Attitudes Toward Women’s Leadership Roles",
+      abstract: "This study examines the causal impact of secondary education tracks—general versus vocational—on attitudes toward women's leadership roles in Egypt. Using data from the Egypt Labor Market Panel Survey (ELMPS) 2012 and 2018, we apply a fuzzy regression discontinuity design based on a cutoff in preparatory exam scores that channel students into vocational or general secondary education. The results indicate that individuals who complete the general secondary track are 32 percentage points more likely to support the idea of women in leadership roles. In addition, this influence appears to be stronger among male graduates compared to their female counterparts. Investigation of potential mechanisms suggests that the impact of general secondary education on these attitudes may operate through increased access to higher education and a higher probability of exposure to female colleagues in the workplace. The findings suggest that placing greater focus on broader social discussions in vocational education curricula and expanding opportunities for vocational graduates to pursue higher education could promote more egalitarian attitudes and contribute to advancing gender equality in leadership roles.",
       coauthors: [],
-      keywords: ["Agricultural Economics", "Innovation", "Field Experiments"]
+      status: "Working Paper",
+      keywords: ["Female leadership", "Vocational education", "Gender role attitudes"]
+    },
+    {
+      title: "Marriage and Gender Role Attitudes",
+      abstract: "Despite progress towards a more gender equal society, substantial gender-based disparities persist in the division of paid and unpaid work, often underpinned by deeply rooted attitudes surrounding gender appropriate roles in work and family life. Therefore, understanding how gender role attitudes form is crucial for addressing persistent gender-based disparities in the labor market and beyond. Using longitudinal data from Egypt, this study examines how key life-events such as marriage and parenthood shape the gender role attitudes of men and women. We find that marriage leads to a significant shift towards more conservative attitudes among women, with no comparable shift observed after parenthood. For men, no statistically significant change is observed after transition to either marriage or parenthood. Notably, the observed shift towards more conservative attitudes among women is driven primarily by women who were relatively more progressive before marriage. Additionally, we find that the absolute distance between the gender role attitude index of women and their husbands declines post marriage, suggesting that women may adjust their views to align more closely with a new, gendered marital identity.",
+      status: "Draft",
+      coauthors: ["Kajari Saha", "Koustuv Saha"],
+      keywords: ["Gender Role Attitudes", "Labour Market Outcomes"]
     }
   ];
 
   const publications = [
-    {
-      title: "Climate Change Adaptation in Small-Scale Agriculture",
-      journal: "Journal of Development Economics",
-      year: "2023",
-      volume: "Vol. 156",
-      coauthors: ["Dr. Sarah Wilson", "Prof. Michael Brown"],
-      link: "#"
-    },
-    {
-      title: "Gender Gaps in Agricultural Productivity: A Meta-Analysis",
-      journal: "Economic Development Quarterly",
-      year: "2022",
-      volume: "Vol. 36(2)",
-      coauthors: ["Dr. Emma Davis"],
-      link: "#"
-    }
+    // {
+    //   title: "Climate Change Adaptation in Small-Scale Agriculture",
+    //   journal: "Journal of Development Economics",
+    //   year: "2023",
+    //   volume: "Vol. 156",
+    //   coauthors: ["Dr. Sarah Wilson", "Prof. Michael Brown"],
+    //   link: "#"
+    // },
+    // {
+    //   title: "Gender Gaps in Agricultural Productivity: A Meta-Analysis",
+    //   journal: "Economic Development Quarterly",
+    //   year: "2022",
+    //   volume: "Vol. 36(2)",
+    //   coauthors: ["Dr. Emma Davis"],
+    //   link: "#"
+    // }
   ];
 
   const awards = [
     {
-      title: "Best Paper Award",
-      organization: "International Development Economics Association",
-      year: "2023"
+      title: "Research For Impact Fellowship",
+      organization: "J-PAL/CLEAR South Asia",
+      year: "2024"
     },
     {
-      title: "Early Career Research Grant",
-      organization: "National Science Foundation",
-      year: "2022"
+      title: "UGC-NET cum Junior Research Fellowship",
+      organization: [],
+      year: "2017"
     },
-    {
-      title: "Outstanding Dissertation Award",
-      organization: "University Economics Department",
-      year: "2020"
-    }
   ];
 
   return (
@@ -71,8 +66,11 @@ const ResearchSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Research</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            My research focuses on the intersection of economics, environment, and development, 
-            with particular emphasis on understanding how policy interventions affect vulnerable populations.
+          My research examines the interaction between gender and labour markets, 
+          with a particular focus on how socio-economic determinants shape Gender Role 
+          Attitudes (GRAs) and, in turn, how these attitudes influence labour market outcomes.
+
+
           </p>
         </div>
 
@@ -107,9 +105,11 @@ const ResearchSection = () => {
                       </Badge>
                     ))}
                   </div>
-                  <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    View Paper
+                  <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5349036" target="_blank" rel="noopener noreferrer">
+                      <ExternalLink className="mr-2 h-4 w-4" />
+                      View Paper
+                    </a>
                   </Button>
                 </CardContent>
               </Card>

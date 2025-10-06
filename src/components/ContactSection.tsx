@@ -7,36 +7,36 @@ const ContactSection = () => {
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@university.edu",
-      href: "mailto:your.email@university.edu"
+      value: "shraddhay@igidr.ac.in",
+      href: "mailto:shraddhay@igidr.ac.in"
     },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567"
-    },
-    {
-      icon: MapPin,
-      label: "Office",
-      value: "Economics Department, Room 123\nUniversity Building\nCity, State 12345",
-      href: "#"
-    },
-    {
-      icon: Calendar,
-      label: "Office Hours",
-      value: "Tuesdays & Thursdays\n2:00 PM - 4:00 PM\n(By appointment)",
-      href: "#"
-    }
+    // {
+    //   icon: Phone,
+    //   label: "Phone",
+    //   value: "+1 (555) 123-4567",
+    //   href: "tel:+15551234567"
+    // },
+    // {
+    //   icon: MapPin,
+    //   label: "Office",
+    //   value: "Economics Department, Room 123\nUniversity Building\nCity, State 12345",
+    //   href: "#"
+    // },
+    // {
+    //   icon: Calendar,
+    //   label: "Office Hours",
+    //   value: "Tuesdays & Thursdays\n2:00 PM - 4:00 PM\n(By appointment)",
+    //   href: "#"
+    // }
   ];
 
   const socialLinks = [
-    { name: "Google Scholar", href: "#" },
-    { name: "ResearchGate", href: "#" },
-    { name: "LinkedIn", href: "#" },
-    { name: "ORCID", href: "#" },
-    { name: "Academia.edu", href: "#" },
-    { name: "Twitter", href: "#" }
+    // { name: "Google Scholar", href: "#" },
+    // { name: "ResearchGate", href: "#" },
+    // { name: "LinkedIn", href: "#" },
+    { name: "ORCID", href: "https://orcid.org/0009-0000-1720-6329" },
+    // { name: "Academia.edu", href: "#" },
+    { name: "Twitter", href: "https://x.com/shraddhayadv" }
   ];
 
   return (
@@ -45,8 +45,8 @@ const ContactSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Contact</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I welcome discussions about research collaborations, academic opportunities, 
-            and consultations related to my areas of expertise.
+            {/* I welcome discussions about research collaborations, academic opportunities, 
+            and consultations related to my areas of expertise. */}
           </p>
         </div>
 
@@ -112,9 +112,9 @@ const ContactSection = () => {
               <div className="mt-8 p-4 bg-primary/5 rounded-lg border border-primary/10">
                 <h4 className="font-medium text-foreground mb-2">Collaboration Interests</h4>
                 <p className="text-sm text-muted-foreground">
-                  I am always interested in collaborating on projects related to environmental economics, 
+                  {/* I am always interested in collaborating on projects related to environmental economics, 
                   development policy, and empirical research methodologies. Feel free to reach out to 
-                  discuss potential partnerships or research opportunities.
+                  discuss potential partnerships or research opportunities. */}
                 </p>
               </div>
             </CardContent>
@@ -129,15 +129,15 @@ const ContactSection = () => {
                 Interested in Collaboration?
               </h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Whether you're a fellow researcher, student, or policy maker, I'd love to hear 
-                about your work and explore potential collaborations.
+                {/* Whether you're a fellow researcher, student, or policy maker, I'd love to hear 
+                about your work and explore potential collaborations. */}
               </p>
               <Button 
                 size="lg" 
                 className="bg-primary hover:bg-primary/90 text-primary-foreground"
                 asChild
               >
-                <a href="mailto:your.email@university.edu">
+                <a href="mailto:shraddhay@igidr.ac.in">
                   <Mail className="mr-2 h-5 w-5" />
                   Send Email
                 </a>

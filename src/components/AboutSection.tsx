@@ -6,53 +6,58 @@ const AboutSection = () => {
   const education = [
     {
       degree: "Ph.D. in Economics",
-      institution: "University Name",
-      year: "2020",
-      location: "City, Country"
+      institution: "Indira Gandhi Institute of Development Research",
+      year: "2021-2025 (expected)",
+      location: "Mumbai, India"
+    },
+    {
+      degree: "M.Phil. in Economics",
+      institution: "Indira Gandhi Institute of Development Research",
+      year: "2017-2019",
+      location: "Mumbai, India"
     },
     {
       degree: "M.A. in Economics",
-      institution: "University Name",
-      year: "2016",
-      location: "City, Country"
+      institution: "Jawaharlal Nehru University",
+      year: "2015-2017",
+      location: "New Delhi, India"
     },
     {
       degree: "B.A. in Economics",
-      institution: "University Name",
-      year: "2014",
-      location: "City, Country"
+      institution: "Daulat Ram College, University of Delhi",
+      year: "2012-2015",
+      location: "New Delhi, India"
     }
   ];
 
   const positions = [
     {
-      title: "Assistant Professor",
-      institution: "Current University",
-      period: "2021 - Present",
-      location: "City, Country"
+      title: "Associate",
+      institution: "PricewaterhouseCoopers (PwC)",
+      period: "2019 - 2021",
+      location: "Gurgaon, India"
     },
-    {
-      title: "Visiting Research Fellow",
-      institution: "Research Institute",
-      period: "2020 - 2021",
-      location: "City, Country"
-    },
-    {
-      title: "Lecturer",
-      institution: "Previous University",
-      period: "2018 - 2020",
-      location: "City, Country"
-    }
+    // {
+    //   title: "Visiting Research Fellow",
+    //   institution: "Research Institute",
+    //   period: "2020 - 2021",
+    //   location: "City, Country"
+    // },
+    // {
+    //   title: "Lecturer",
+    //   institution: "Previous University",
+    //   period: "2018 - 2020",
+    //   location: "City, Country"
+    // }
   ];
 
   const researchInterests = [
+    "Gender Economics",
     "Labor Economics",
-    "Environmental Economics",
     "Development Economics",
-    "Social Identity",
-    "Agricultural Economics",
-    "Policy Analysis",
-    "Econometric Methods"
+    "Econometric Methods",
+    "Gender Role Attitudes",
+    "Policy Analysis"  
   ];
 
   return (
@@ -61,8 +66,7 @@ const AboutSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">About Me</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I am a dedicated researcher and educator with a passion for understanding 
-            economic systems and their impact on society and the environment.
+            
           </p>
         </div>
 
