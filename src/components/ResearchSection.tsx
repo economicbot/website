@@ -4,6 +4,15 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, FileText, Award } from "lucide-react";
 
 const ResearchSection = () => {
+  const JobMarketPaper = [
+    {
+      title: "Education Tracks and Attitudes Toward Women’s Leadership Roles",
+      abstract: "This study examines the causal impact of secondary education tracks (general versus vocational) on gender role attitudes using data from the Egypt Labor Market Panel Survey (ELMPS). We employ a fuzzy regression discontinuity design exploiting a preparatory exam score cutoff that determines assignment to general or vocational secondary education. The results indicate that general secondary graduates are 18 percentage points more likely to agree that women should be allowed to work and 22 percentage points more likely to support women holding leadership positions, compared to vocational graduates. In addition, this influence appears to be stronger among male graduates compared to their female counterparts. Investigation of potential mechanisms suggests that educational tracks may affect gender role attitudes through differences in access to higher education, exposure to female coworkers, peer composition and education curricula. The findings highlight the need for greater focus on broader social discussions in vocational education curricula and expanded opportunities for vocational graduates to pursue higher education, which could promote more egalitarian gender role attitudes and contribute to advancing gender equality.",
+      coauthors: [],
+      status: "Under Review",
+      keywords: ["Female leadership", "Vocational education", "Gender role attitudes"]
+    }
+  ]
   const workingPapers = [
     {
       title: "Gender-Diverse Workplaces and Men's Gender Role Attitudes Towards Working Women",
@@ -11,21 +20,14 @@ const ResearchSection = () => {
       status: "Under Review",
       coauthors: ["Ajay Saharan"],
       keywords: ["Gender Role Attitude", "Gender-diverse Workplaces"]
-    },
-    {
-      title: "Education Tracks and Attitudes Toward Women’s Leadership Roles",
-      abstract: "This study examines the causal impact of secondary education tracks—general versus vocational—on attitudes toward women's leadership roles in Egypt. Using data from the Egypt Labor Market Panel Survey (ELMPS) 2012 and 2018, we apply a fuzzy regression discontinuity design based on a cutoff in preparatory exam scores that channel students into vocational or general secondary education. The results indicate that individuals who complete the general secondary track are 32 percentage points more likely to support the idea of women in leadership roles. In addition, this influence appears to be stronger among male graduates compared to their female counterparts. Investigation of potential mechanisms suggests that the impact of general secondary education on these attitudes may operate through increased access to higher education and a higher probability of exposure to female colleagues in the workplace. The findings suggest that placing greater focus on broader social discussions in vocational education curricula and expanding opportunities for vocational graduates to pursue higher education could promote more egalitarian attitudes and contribute to advancing gender equality in leadership roles.",
-      coauthors: [],
-      status: "Working Paper",
-      keywords: ["Female leadership", "Vocational education", "Gender role attitudes"]
-    },
-    {
-      title: "Marriage and Gender Role Attitudes",
-      abstract: "Despite progress towards a more gender equal society, substantial gender-based disparities persist in the division of paid and unpaid work, often underpinned by deeply rooted attitudes surrounding gender appropriate roles in work and family life. Therefore, understanding how gender role attitudes form is crucial for addressing persistent gender-based disparities in the labor market and beyond. Using longitudinal data from Egypt, this study examines how key life-events such as marriage and parenthood shape the gender role attitudes of men and women. We find that marriage leads to a significant shift towards more conservative attitudes among women, with no comparable shift observed after parenthood. For men, no statistically significant change is observed after transition to either marriage or parenthood. Notably, the observed shift towards more conservative attitudes among women is driven primarily by women who were relatively more progressive before marriage. Additionally, we find that the absolute distance between the gender role attitude index of women and their husbands declines post marriage, suggesting that women may adjust their views to align more closely with a new, gendered marital identity.",
-      status: "Draft",
-      coauthors: ["Kajari Saha", "Koustuv Saha"],
-      keywords: ["Gender Role Attitudes", "Labour Market Outcomes"]
     }
+    // {
+    //   title: "Marriage and Gender Role Attitudes",
+    //   abstract: "Despite progress towards a more gender equal society, substantial gender-based disparities persist in the division of paid and unpaid work, often underpinned by deeply rooted attitudes surrounding gender appropriate roles in work and family life. Therefore, understanding how gender role attitudes form is crucial for addressing persistent gender-based disparities in the labor market and beyond. Using longitudinal data from Egypt, this study examines how key life-events such as marriage and parenthood shape the gender role attitudes of men and women. We find that marriage leads to a significant shift towards more conservative attitudes among women, with no comparable shift observed after parenthood. For men, no statistically significant change is observed after transition to either marriage or parenthood. Notably, the observed shift towards more conservative attitudes among women is driven primarily by women who were relatively more progressive before marriage. Additionally, we find that the absolute distance between the gender role attitude index of women and their husbands declines post marriage, suggesting that women may adjust their views to align more closely with a new, gendered marital identity.",
+    //   status: "Draft",
+    //   coauthors: ["Kajari Saha", "Koustuv Saha"],
+    //   keywords: ["Gender Role Attitudes", "Labour Market Outcomes"]
+    // }
   ];
 
   const publications = [
@@ -73,6 +75,45 @@ const ResearchSection = () => {
 
           </p>
         </div>
+
+        {/* Job Market Paper */}
+        {JobMarketPaper.length > 0 && (
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold text-foreground mb-6 flex items-center">
+              <FileText className="mr-3 h-6 w-6 text-primary" />
+              Job Market Paper
+            </h3>
+            <div className="space-y-6">
+              {JobMarketPaper.map((paper, index) => (
+                <Card key={index} className="shadow-lg border-primary/20 hover:shadow-xl transition-shadow bg-gradient-to-r from-primary/5 to-transparent">
+                  <CardHeader>
+                    <div className="flex justify-between items-start">
+                      <CardTitle className="text-lg text-foreground">{paper.title}</CardTitle>
+                      <Badge variant="outline" className="border-primary text-primary">
+                        {paper.status}
+                      </Badge>
+                    </div>
+                    {paper.coauthors.length > 0 && (
+                      <p className="text-sm text-muted-foreground">
+                        Co-authors: {paper.coauthors.join(", ")}
+                      </p>
+                    )}
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-foreground/80 mb-4">{paper.abstract}</p>
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {paper.keywords.map((keyword, i) => (
+                        <Badge key={i} variant="secondary" className="text-xs bg-primary/10 text-primary">
+                          {keyword}
+                        </Badge>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Working Papers */}
         <div className="mb-12">

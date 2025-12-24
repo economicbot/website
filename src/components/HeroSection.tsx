@@ -9,7 +9,7 @@ interface HeroSectionProps {
 const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
   const socialLinks = [
     { name: "Email", href: "mailto:shraddhay@igidr.ac.in", icon: Mail },
-    { name: "Google Scholar", href: "#", icon: ExternalLink },
+    // { name: "Google Scholar", href: "#", icon: ExternalLink },
     // { name: "ResearchGate", href: "#", icon: ExternalLink },
     // { name: "LinkedIn", href: "#", icon: ExternalLink },
     { name: "ORCID", href: "https://orcid.org/0009-0000-1720-6329", icon: ExternalLink },
