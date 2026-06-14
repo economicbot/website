@@ -149,4 +149,12 @@
   .nav-link.active {
     @apply text-primary border-b-2 border-primary;
   }
+
+  .justified-prose {
+    @apply text-justify leading-relaxed text-foreground/80;
+  }
+
+  .justified-prose p {
+    @apply text-justify;
+  }
 }

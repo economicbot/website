@@ -98,7 +98,7 @@ const TeachingSection = () => {
                 {teachingPhilosophy.map((principle, index) => (
                   <div key={index} className="flex items-start space-x-3">
                     <div className="flex-shrink-0 w-2 h-2 bg-primary rounded-full mt-2"></div>
-                    <p className="text-foreground/80">{principle}</p>
+                    <p className="justified-prose">{principle}</p>
                   </div>
                 ))}
               </div>

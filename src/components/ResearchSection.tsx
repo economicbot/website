@@ -1,7 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, FileText, Award } from "lucide-react";
+import { ExternalLink, FileText, Award, Newspaper } from "lucide-react";
 
 const ResearchSection = () => {
   const JobMarketPaper = [
@@ -43,6 +43,16 @@ const ResearchSection = () => {
     //   coauthors: ["Kajari Saha", "Koustuv Saha"],
     //   keywords: ["Gender Role Attitudes", "Labour Market Outcomes"]
     // }
+  ];
+
+  const opEds = [
+    {
+      title: "A tale of two Bundelkhands: UP cuts a sorry figure compared to MP in all sectors, data shows",
+      outlet: "ThePrint",
+      year: "2022",
+      coauthors: ["Vikash Vaibhav", "Varun Kumar Das"],
+      link: "https://theprint.in/opinion/a-tale-of-two-bundelkhands-up-cuts-a-sorry-figure-compared-to-mp-in-all-sectors-data-shows/834901/",
+    },
   ];
 
   const awards = [
@@ -93,7 +103,7 @@ const ResearchSection = () => {
                     )}
                   </CardHeader>
                   <CardContent>
-                    <p className="text-foreground/80 mb-4">{paper.abstract}</p>
+                    <p className="justified-prose mb-4">{paper.abstract}</p>
                     <div className="flex flex-wrap gap-2 mb-4">
                       {paper.keywords.map((keyword, i) => (
                         <Badge key={i} variant="secondary" className="text-xs bg-primary/10 text-primary">
@@ -139,7 +149,7 @@ const ResearchSection = () => {
                   )}
                 </CardHeader>
                 <CardContent>
-                  <p className="text-foreground/80 mb-4">{paper.abstract}</p>
+                  <p className="justified-prose mb-4">{paper.abstract}</p>
                   <div className="flex flex-wrap gap-2 mb-4">
                     {paper.keywords.map((keyword, i) => (
                       <Badge key={i} variant="secondary" className="text-xs bg-primary/10 text-primary">
@@ -160,6 +170,45 @@ const ResearchSection = () => {
             ))}
           </div>
         </div>
+
+        {/* Op-eds & Commentary */}
+        {opEds.length > 0 && (
+          <div className="mb-12">
+            <h3 className="text-2xl font-semibold text-foreground mb-6 flex items-center">
+              <Newspaper className="mr-3 h-6 w-6 text-primary" />
+              Op-eds & Commentary
+            </h3>
+            <div className="space-y-4">
+              {opEds.map((article, index) => (
+                <Card key={index} className="shadow-md border-primary/10 hover:shadow-lg transition-shadow">
+                  <CardContent className="pt-6">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-foreground mb-1">{article.title}</h4>
+                        <p className="text-sm text-primary font-medium mb-2">
+                          {article.outlet} · {article.year}
+                        </p>
+                        {article.coauthors && article.coauthors.length > 0 && (
+                          <p className="text-sm text-muted-foreground mb-2">
+                            Co-authors: {article.coauthors.join(", ")}
+                          </p>
+                        )}
+                      </div>
+                      {article.link && (
+                        <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground shrink-0" asChild>
+                          <a href={article.link} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="mr-2 h-4 w-4" />
+                            Read Article
+                          </a>
+                        </Button>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Awards & Recognition */}
         <div>

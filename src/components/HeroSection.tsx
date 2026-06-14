@@ -59,9 +59,9 @@ const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
                 PhD Candidate in Economics
               </h2>
               
-              <div className="space-y-4 text-lg leading-relaxed text-foreground/80 mb-8">
+              <div className="justified-prose space-y-4 text-lg mb-8">
                 <p>
-                I am a Ph.D. candidate in Economics at <span className="text-primary font-medium"> Indira Gandhi Institute of Development Research (IGIDR).</span>
+                I am a Ph.D. candidate in Economics at <span className="text-primary font-medium">Indira Gandhi Institute of Development Research (IGIDR).</span>
                 </p>
                 <p>
                   My field of specialization is applied microeconomics. My research lies at the intersection of gender, labour, and political economy. I study how gender role attitudes shape women’s labour market transitions, and how institutions such as schools, workplaces, and marriage influence those attitudes in societies with low female labour force participation.
