@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import AboutSection from "@/components/AboutSection";
 import ResearchSection from "@/components/ResearchSection";
 import TeachingSection from "@/components/TeachingSection";
-import ContactSection from "@/components/ContactSection";
+import CVSection from "@/components/CVSection";
 
 const Index = () => {
   const [currentSection, setCurrentSection] = useState("home");
@@ -13,11 +13,10 @@ const Index = () => {
   useEffect(() => {
     const titles = {
       home: "Shraddha Yadav",
-      about: "Shraddha Yadav - About",
+      about: "Shraddha Yadav - Bio",
       research: "Shraddha Yadav - Research",
-      publications: "Shraddha Yadav - Publications",
       teaching: "Shraddha Yadav - Teaching",
-      contact: "Shraddha Yadav - Contact",
+      cv: "Shraddha Yadav - CV",
     };
     document.title = titles[currentSection as keyof typeof titles] || "Shraddha Yadav";
   }, [currentSection]);
@@ -29,12 +28,11 @@ const Index = () => {
       case "about":
         return <AboutSection />;
       case "research":
-      case "publications":
         return <ResearchSection />;
       case "teaching":
         return <TeachingSection />;
-      case "contact":
-        return <ContactSection />;
+      case "cv":
+        return <CVSection />;
       default:
         return <HeroSection onSectionChange={setCurrentSection} />;
     }

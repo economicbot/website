@@ -139,7 +139,7 @@
   }
 
   .profile-image {
-    @apply rounded-2xl shadow-2xl border-4 border-white/10;
+    @apply rounded-[50%] shadow-2xl border-4 border-white/10;
   }
 
   .nav-link {

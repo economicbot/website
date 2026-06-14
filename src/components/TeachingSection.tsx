@@ -5,17 +5,26 @@ import { BookOpen, Users, MapPin } from "lucide-react";
 const TeachingSection = () => {
   const teachingExperience = [
     {
-      role: "Teaching Assistant",
-      level: "Graduate-level",
-      institution: "Indira Gandhi Institute of Development Research (IGIDR)",
-      period: "2021 - Present",
+      role: "Instructor",
+      level: "Graduate students",
+      institution: "Indira Gandhi Institute of Development Research (IGIDR), Mumbai",
+      period: "Aug–Dec 2025",
       location: "Mumbai, India",
       courses: [
-        "Econometrics I - Fall, 2025 (Compulsory)",
-        "Applied Econometrics - Spring, 2023 (Elective)",
-        "Causal Inference - Spring 2019 (Elective)"
-      ]
-    }
+        "Econometrics Bridge Course (12 lectures)",
+      ],
+    },
+    {
+      role: "Teaching Assistant",
+      level: "Graduate students",
+      institution: "Indira Gandhi Institute of Development Research (IGIDR), Mumbai",
+      period: "2019 & 2023",
+      location: "Mumbai, India",
+      courses: [
+        "Applied Econometrics (Aug–Dec 2023)",
+        "Causal Inference (Jan–May 2019)",
+      ],
+    },
   ];
 
   const teachingPhilosophy = [
@@ -61,7 +70,7 @@ const TeachingSection = () => {
                     <span>{exp.location}</span>
                   </div>
                   <div>
-                    <h4 className="font-medium text-foreground mb-2">Courses Taught:</h4>
+                    <h4 className="font-medium text-foreground mb-2">Courses:</h4>
                     <ul className="space-y-1">
                       {exp.courses.map((course, i) => (
                         <li key={i} className="text-sm text-muted-foreground flex items-center">

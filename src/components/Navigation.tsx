@@ -12,11 +12,10 @@ const Navigation = ({ currentSection, onSectionChange }: NavigationProps) => {
 
   const navItems = [
     { id: "home", label: "Home" },
-    { id: "about", label: "About" },
+    { id: "cv", label: "CV" },
     { id: "research", label: "Research" },
-    { id: "publications", label: "Publications" },
     { id: "teaching", label: "Teaching" },
-    { id: "contact", label: "Contact" },
+    { id: "about", label: "Bio" },
   ];
 
   return (

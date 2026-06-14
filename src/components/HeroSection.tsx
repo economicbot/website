@@ -19,16 +19,16 @@ const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-background via-academic-cream to-academic-teal-light/20">
       <div className="max-w-6xl mx-auto">
         <Card className="p-8 lg:p-12 shadow-2xl bg-card/80 backdrop-blur-sm border-2 border-primary/10">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="grid lg:grid-cols-[auto_1fr] gap-8 lg:gap-10 items-start">
             {/* Profile Image and Social Links */}
-            <div className="flex flex-col items-center lg:items-start">
-              <div className="relative mb-6">
+            <div className="flex flex-col items-center lg:items-start lg:w-60 shrink-0">
+              <div className="profile-image relative mb-6 w-56 h-72 lg:w-60 lg:h-[18rem] overflow-hidden">
                 <img
                   src="/lovable-uploads/54740e95-b5dc-4bd3-867a-85d2d5c5377a.png"
                   alt="Academic Profile"
-                  className="profile-image w-64 h-64 lg:w-72 lg:h-72 object-cover"
+                  className="w-full h-full object-cover object-[50%_32%] scale-110"
                 />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-t from-primary/20 to-transparent"></div>
+                <div className="absolute inset-0 rounded-[50%] bg-gradient-to-t from-primary/20 to-transparent pointer-events-none"></div>
               </div>
               
               {/* Social Links */}
@@ -51,7 +51,7 @@ const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
             </div>
 
             {/* Content */}
-            <div className="text-center lg:text-left">
+            <div className="text-center lg:text-left min-w-0 flex-1">
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-4">
                 Shraddha Yadav
               </h1>
@@ -61,10 +61,13 @@ const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
               
               <div className="space-y-4 text-lg leading-relaxed text-foreground/80 mb-8">
                 <p>
-                I am a fifth-year Ph.D. candidate in Economics at <span className="text-primary font-medium"> Indira Gandhi Institute of Development Research (IGIDR).</span>
+                I am a Ph.D. candidate in Economics at <span className="text-primary font-medium"> Indira Gandhi Institute of Development Research (IGIDR).</span>
                 </p>
                 <p>
-                My research interests lie in the areas of Gender and Labour Economics.
+                  My field of specialization is applied microeconomics. My research lies at the intersection of gender, labour, and political economy. I study how gender role attitudes shape women’s labour market transitions, and how institutions such as schools, workplaces, and marriage influence those attitudes in societies with low female labour force participation.
+                </p>
+                <p>
+                  I received my M.Phil. in Economics from IGIDR, Mumbai, M.A. in Economics from Jawaharlal Nehru University, New Delhi and a BA (Honors) in Economics from Daulat Ram College, Delhi University.
                 </p>
               </div>
 
@@ -84,7 +87,7 @@ const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
                   onClick={() => {
                     // Create a temporary link element to trigger download
                     const link = document.createElement('a');
-                    link.href = '/Shraddha_Yadav_CV.pdf'; // Update this path to match your CV file name
+                    link.href = '/lovable-uploads/Shraddha_Yadav_CV.pdf';
                     link.download = 'Shraddha_Yadav_CV.pdf'; // This will be the downloaded file name
                     document.body.appendChild(link);
                     link.click();

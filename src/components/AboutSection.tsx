@@ -7,7 +7,7 @@ const AboutSection = () => {
     {
       degree: "Ph.D. in Economics",
       institution: "Indira Gandhi Institute of Development Research",
-      year: "2021-2025 (expected)",
+      year: "2021-2026 (expected)",
       location: "Mumbai, India"
     },
     {
@@ -52,19 +52,15 @@ const AboutSection = () => {
   ];
 
   const researchInterests = [
-    "Gender Economics",
-    "Labor Economics",
     "Development Economics",
     "Econometric Methods",
-    "Gender Role Attitudes",
-    "Policy Analysis"  
   ];
 
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">About Me</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Bio</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             
           </p>

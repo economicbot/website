@@ -6,20 +6,35 @@ import { ExternalLink, FileText, Award } from "lucide-react";
 const ResearchSection = () => {
   const JobMarketPaper = [
     {
-      title: "Education Tracks and Attitudes Toward Women’s Leadership Roles",
-      abstract: "This study examines the causal impact of secondary education tracks (general versus vocational) on gender role attitudes using data from the Egypt Labor Market Panel Survey (ELMPS). We employ a fuzzy regression discontinuity design exploiting a preparatory exam score cutoff that determines assignment to general or vocational secondary education. The results indicate that general secondary graduates are 18 percentage points more likely to agree that women should be allowed to work and 22 percentage points more likely to support women holding leadership positions, compared to vocational graduates. In addition, this influence appears to be stronger among male graduates compared to their female counterparts. Investigation of potential mechanisms suggests that educational tracks may affect gender role attitudes through differences in access to higher education, exposure to female coworkers, peer composition and education curricula. The findings highlight the need for greater focus on broader social discussions in vocational education curricula and expanded opportunities for vocational graduates to pursue higher education, which could promote more egalitarian gender role attitudes and contribute to advancing gender equality.",
+      title: "Education Tracks and Attitudes Towards Women’s Participation in the Labour Force and Leadership",
+      abstract: "We estimate the causal effect of general versus vocational secondary education on gender role attitudes. Using a fuzzy regression discontinuity design that exploits a preparatory exam score cutoff, we find that general secondary education substantially increases support for gender equality. General secondary graduates are 16 percentage points more likely to agree that women should be allowed to work and 24 percentage points more likely to support women in leadership, relative to vocational graduates. These effects are larger among male graduates than female graduates. Exploring mechanisms, we find evidence that track assignment operates through differences in access to higher education, exposure to female coworkers, peer composition, and curriculum content. Our findings suggest that expanding social and civic content in vocational curricula and broadening higher education pathways for vocational graduates could promote more egalitarian gender attitudes and advance gender equality.",
       coauthors: [],
       status: "Under Review",
-      keywords: ["Female leadership", "Vocational education", "Gender role attitudes"]
+      keywords: ["Gender role attitudes", "Vocational education"],
+      link: "/main.pdf"
     }
   ]
   const workingPapers = [
+
+    {
+      title: "Cross-Tier Incumbency Spillovers: Evidence from India's State Assembly Elections",
+      abstract: "We study cross-tier legislative incumbency spillovers in non-concurrent elections, a relatively understudied dimension of multi-level electoral politics in federal systems. Using a regression discontinuity design with comprehensive election data from India covering parliamentary elections (1999–2019) and state assembly elections (1994–2023), we find significant bidirectional negative spillovers. Having an incumbent member of parliament reduces the probability of that party’s candidate winning in subsequent state assembly elections by 7.2 percentage points (or by 17.6%), within that parliamentary constituency (top-down spillover). Similarly, having an incumbent Member of the Legislative Assembly reduces the party’s vote share in subsequent parliamentary elections by 2.4 percentage points (or by 6.5%), in that assembly constituency (bottom-up spillover). These spillovers compound the welfare costs of incumbency disadvantage: a party already suffering anti-incumbency at one tier faces additional disadvantage from another. Effects are concentrated among centralized parties, non-switching candidates, and both ruling and opposition parties. Spillovers are stronger in less developed states and when elections occur within 2.5 years of each other.",
+      status: (
+        <span>
+          <em>Revise & Resubmit</em> at <strong>Public Choice</strong>
+        </span>
+      ),
+      coauthors: ["Ajay Saharan"],
+      keywords: ["Cross-tier Incumbency Spillovers", "Multi-tier Elections"],
+      link: "/Incumbency_spillovers.pdf"
+    },
     {
       title: "Gender-Diverse Workplaces and Men's Gender Role Attitudes Towards Working Women",
       abstract: "We assess whether the presence of female coworkers influences men’s gender role attitudes toward working women (GRAWW), particularly regarding working women balancing professional and domestic responsibilities. Using panel data from Egypt, characterized by low female labor force participation and traditional gender norms, we estimate a two-way fixed effects model. Men in gender-diverse workplaces report significantly more progressive GRAWW, higher by 0.14 standard deviations, and with larger effects where women comprise over 25% of employees. Effects are stronger among younger men and those with more traditional baseline views. Results are robust to checks for self-selection, workplace characteristics, and pre-existing trends.",
       status: "Under Review",
       coauthors: ["Ajay Saharan"],
-      keywords: ["Gender Role Attitude", "Gender-diverse Workplaces"]
+      keywords: ["Gender Role Attitude", "Gender-diverse Workplaces"],
+      link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5349036"
     }
     // {
     //   title: "Marriage and Gender Role Attitudes",
@@ -27,25 +42,6 @@ const ResearchSection = () => {
     //   status: "Draft",
     //   coauthors: ["Kajari Saha", "Koustuv Saha"],
     //   keywords: ["Gender Role Attitudes", "Labour Market Outcomes"]
-    // }
-  ];
-
-  const publications = [
-    // {
-    //   title: "Climate Change Adaptation in Small-Scale Agriculture",
-    //   journal: "Journal of Development Economics",
-    //   year: "2023",
-    //   volume: "Vol. 156",
-    //   coauthors: ["Dr. Sarah Wilson", "Prof. Michael Brown"],
-    //   link: "#"
-    // },
-    // {
-    //   title: "Gender Gaps in Agricultural Productivity: A Meta-Analysis",
-    //   journal: "Economic Development Quarterly",
-    //   year: "2022",
-    //   volume: "Vol. 36(2)",
-    //   coauthors: ["Dr. Emma Davis"],
-    //   link: "#"
     // }
   ];
 
@@ -68,10 +64,7 @@ const ResearchSection = () => {
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Research</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-          My research examines the interaction between gender and labour markets, 
-          with a particular focus on how socio-economic determinants shape Gender Role 
-          Attitudes (GRAs) and, in turn, how these attitudes influence labour market outcomes.
-
+          
 
           </p>
         </div>
@@ -108,6 +101,14 @@ const ResearchSection = () => {
                         </Badge>
                       ))}
                     </div>
+                    {paper.link && (
+                      <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+                        <a href={paper.link} target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="mr-2 h-4 w-4" />
+                          View Paper
+                        </a>
+                      </Button>
+                    )}
                   </CardContent>
                 </Card>
               ))}
@@ -146,38 +147,14 @@ const ResearchSection = () => {
                       </Badge>
                     ))}
                   </div>
-                  <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
-                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5349036" target="_blank" rel="noopener noreferrer">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      View Paper
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Publications */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-semibold text-foreground mb-6">Publications</h3>
-          <div className="space-y-4">
-            {publications.map((pub, index) => (
-              <Card key={index} className="shadow-md border-primary/10">
-                <CardContent className="pt-6">
-                  <h4 className="font-semibold text-foreground mb-2">{pub.title}</h4>
-                  <p className="text-primary font-medium mb-1">
-                    {pub.journal}, {pub.year}, {pub.volume}
-                  </p>
-                  {pub.coauthors.length > 0 && (
-                    <p className="text-sm text-muted-foreground mb-3">
-                      Co-authors: {pub.coauthors.join(", ")}
-                    </p>
+                  {paper.link && (
+                    <Button variant="outline" size="sm" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" asChild>
+                      <a href={paper.link} target="_blank" rel="noopener noreferrer">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        View Paper
+                      </a>
+                    </Button>
                   )}
-                  <Button variant="ghost" size="sm" className="text-primary hover:text-primary/80 p-0 h-auto academic-link">
-                    <ExternalLink className="mr-2 h-4 w-4" />
-                    View Publication
-                  </Button>
                 </CardContent>
               </Card>
             ))}
