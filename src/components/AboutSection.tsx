@@ -23,7 +23,7 @@ const AboutSection = () => {
       location: "New Delhi, India"
     },
     {
-      degree: "B.A. in Economics",
+      degree: "B.A. (Honours) in Economics",
       institution: "Daulat Ram College, University of Delhi",
       year: "2012-2015",
       location: "New Delhi, India"
