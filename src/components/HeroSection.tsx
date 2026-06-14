@@ -67,7 +67,7 @@ const HeroSection = ({ onSectionChange }: HeroSectionProps) => {
                   My field of specialization is applied microeconomics. My research lies at the intersection of gender, labour, and political economy. I study how gender role attitudes shape women’s labour market transitions, and how institutions such as schools, workplaces, and marriage influence those attitudes in societies with low female labour force participation.
                 </p>
                 <p>
-                  I received my M.Phil. in Economics from IGIDR, Mumbai, M.A. in Economics from Jawaharlal Nehru University, New Delhi and a BA (Honors) in Economics from Daulat Ram College, Delhi University.
+                  I received my M.Phil. in Economics from IGIDR, Mumbai, M.A. in Economics from Jawaharlal Nehru University, New Delhi and a B.A. (Honors) in Economics from Daulat Ram College, Delhi University.
                 </p>
               </div>
 
