@@ -26,7 +26,7 @@ const ResearchSection = () => {
       ),
       coauthors: ["Ajay Saharan"],
       keywords: ["Cross-tier Incumbency Spillovers", "Multi-tier Elections"],
-      link: "/Incumbency_spillovers.pdf"
+      link: "/lovable-uploads/Cross_tier_incumbency_spillovers.pdf"
     },
     {
       title: "Gender-Diverse Workplaces and Men's Gender Role Attitudes Towards Working Women",
